@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" verbose="1" name="Suite"  parallel="tests">
+	<test  name="Test">
+	<parameter name = "url"   value ="https://www.ilovepdf.com/" />
+		<groups>
+			<run>
+				<exclude name="Appium" />
+				<exclude name="Selenium" />
+				<exclude name="Sanity" />
+				<exclude name="Hello" />
+			</run>
+		</groups>
+		<classes>
+			<class name="ok.TestNgAnnotation" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
